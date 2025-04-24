@@ -1,0 +1,15 @@
+{
+	"TEST_ERROR": "This is a test error",
+	"USER_NOT_FOUND": "User with ID {id} not found.",
+	"otp_send_failed": "Unable to send OTP",
+	"invalid_refresh_token": "Invalid refresh token",
+	"refresh_token_expired": "Refresh token is invalid or expired",
+	"reset_password_instructions": "Reset password instructions sent to email",
+	"invalid_reset_password_token": "Invalid password reset token",
+	"reset_password_token_expired": "Password reset token has expired",
+	"user_already_exists": "User with this email already exists",
+	"invalid_verification_token": "Invalid verification token",
+	"create_user_failed": "Error occured while creating user"
+
+
+}

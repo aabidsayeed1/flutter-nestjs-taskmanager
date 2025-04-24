@@ -1,0 +1,12 @@
+{
+	"HELLO_WORLD": "Hello World!",
+	"logout_success": "Logged out successfully.",
+	"otp_sent_success": "OTP sent successfully",
+	"valid_reset_password_token": "Password reset token is valid",
+	"user_registered": "User registered. Please check your email for verification.",
+	"password_reset_successful": "Password has been reset successfully",
+	"email_verified_successfully": "Email verified successfully",
+	"user_onboard_success": "User onboard successfully",
+	"delete_success": "Deleted successfully",
+	"language_update_successful": "User language updated successfully"
+}

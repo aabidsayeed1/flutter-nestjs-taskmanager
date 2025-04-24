@@ -1,0 +1,4 @@
+{
+	"TEST_ERROR": "Este es un error de prueba",
+	"USER_NOT_FOUND": "Usuario con ID {id} no encontrado."
+}

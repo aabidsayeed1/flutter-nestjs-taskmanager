@@ -1,0 +1,13 @@
+echo "Hello Husky precommit"
+
+#############################
+# npm - Node Package Manager
+# npx is a package runner tool that comes with npm. This allows you to run binaries from node_modules without having to install them globally
+#############################
+# This command is used to run the linting script defined in package.json
+npm run lint
+#############################
+# This command is used to run the typescript compiler  
+# noEmit flag tells the typescript compiler to perform the type checking and compile time checks to not emit any output files 
+npx tsc --noEmit
+#############################

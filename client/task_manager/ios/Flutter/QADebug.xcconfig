@@ -1,0 +1,6 @@
+#include? "Pods/Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"
+#include "Generated.xcconfig"
+
+ASSET_PREFIX=QA
+BUNDLE_NAME=Task Manager QA
+BUNDLE_DISPLAY_NAME=Task Manager QA

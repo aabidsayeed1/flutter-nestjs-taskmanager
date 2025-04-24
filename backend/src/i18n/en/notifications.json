@@ -1,0 +1,30 @@
+
+{
+  "customer-otp": {
+          "sms": {
+              "message": "{otp} is the One Time Password (OTP) for MVPRockets login at Napses.",
+              "template_id": "1007168560401680472"
+          },
+          "whatsapp": {
+              "message": "{otp} is the One Time Password (OTP) for MVPRockets login."
+          },
+          "email": {
+           "subject": "Your OTP Code for Secure Access",
+           "message": "Dear {name},\n\nYour One-Time Password (OTP) for accessing your account is: {otp}.\n\nPlease enter this code within the next {expiry} minutes to complete your verification. For your security, do not share this OTP with anyone.\n\nIf you did not request this code, please contact our support team immediately.\n\nThank you,\nNapses Support Team"  
+      }
+  },
+  "admin-otp": {
+          "sms": {
+              "message": "{otp} is the One Time Password (OTP) for MVPRockets login at Napses.",
+              "template_id": "1007168560401680472"
+          },
+          "whatsapp": {
+              "message": "{otp} is the One Time Password (OTP) for MVPRockets login."
+          },
+          "email": {
+           "subject": "Your OTP Code for Secure Access",
+           "message": "Dear {name},\n\nYour One-Time Password (OTP) for accessing your account is: {otp}.\n\nPlease enter this code within the next {expiry} minutes to complete your verification. For your security, do not share this OTP with anyone.\n\nIf you did not request this code, please contact our support team immediately.\n\nThank you,\nNapses Support Team"  
+        }
+  }
+}
+

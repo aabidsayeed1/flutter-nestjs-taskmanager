@@ -1,0 +1,1 @@
+enum TaskType{pending,completed,favorite,removed}

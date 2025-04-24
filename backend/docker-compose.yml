@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+    api:
+        build:
+            context: .
+            dockerfile: api.Dockerfile
+        env_file:
+            - ./envs/.env.${NODE_ENV}
+        environment:
+            - NODE_ENV=${NODE_ENV}
+        command: npm run start
+        container_name: task-manager_api
+        working_dir: /app
+        volumes:
+            - .:/app
+            - /app/node_modules
+        ports:
+            - '3000:3000'
+        depends_on:
+            - postgres
+            - redis
+
+    postgres:
+        image: postgres:13
+        container_name: task-manager_postgres
+        env_file:
+            - ./envs/.env.${NODE_ENV}
+        environment:
+            POSTGRES_DB: ${POSTGRES_DATABASE:-Dev-task-manager}
+            POSTGRES_USER: ${POSTGRES_USERNAME:-root}
+            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-root}
+        volumes:
+            - task-manager_postgres_data:/var/lib/postgresql/data
+            - ./certs:/certs # Mount the directory containing SSL certificates
+        ports:
+            - '5432:5432'
+
+    redis:
+        image: redis:6
+        container_name: task-manager_redis
+        env_file:
+            - ./envs/.env.${NODE_ENV}
+        ports:
+            - '6379:6379'
+
+    sqs:
+        image: softwaremill/elasticmq
+        container_name: task-manager_sqs
+        ports:
+            - '9324:9324'
+        environment:
+            - ELASTICMQ_HOSTNAME=task-manager_sqs
+        volumes:
+            - ./elasticmq/custom.conf:/opt/elasticmq.conf
+
+volumes:
+    task-manager_postgres_data:
+    task-manager_node_modules:

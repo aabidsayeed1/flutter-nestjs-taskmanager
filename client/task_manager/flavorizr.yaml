@@ -1,0 +1,37 @@
+flavors:
+  DEV:
+    app:
+      name: "Task Manager DEV"
+    android:
+      applicationId: "com.task.manager.dev"
+      generateDummyAssets: true
+    ios:
+      bundleId: "com.task.manager.dev"
+      generateDummyAssets: true
+  QA:
+    app:
+      name: "Task Manager QA"
+    android:
+      applicationId: "com.task.manager.qa"
+      generateDummyAssets: true
+    ios:
+      bundleId: "com.task.manager.qa"
+      generateDummyAssets: true
+  UAT:
+    app:
+      name: "Task Manager UAT"
+    android:
+      applicationId: "com.task.manager.uat"
+      generateDummyAssets: true
+    ios:
+      bundleId: "com.task.manager.uat"
+      generateDummyAssets: true
+  PROD:
+    app:
+      name: "Task Manager PROD"
+    android:
+      applicationId: "com.task.manager"
+      generateDummyAssets: true
+    ios:
+      bundleId: "com.task.manager"
+      generateDummyAssets: true

@@ -1,0 +1,28 @@
+{
+  "customer-otp": {
+      "sms": {
+        "message": "{otp} es el Código de Acceso Único (OTP) para el inicio de sesión en MVPRockets en Napses.",
+        "template_id": "1007168560401680472"
+      },
+      "whatsapp": {
+        "message": "{otp} es el Código de Acceso Único (OTP) para el inicio de sesión en MVPRockets."
+      },
+      "email": {
+       "subject": "Tu Código OTP para Acceso Seguro",
+       "message": "Estimado/a {name},\n\nTu Código de Acceso Único (OTP) para acceder a tu cuenta es: {otp}.\n\nPor favor, introduce este código en los próximos {expiry} minutos para completar la verificación. Por tu seguridad, no compartas este código con nadie.\n\nSi no solicitaste este código, por favor contacta con nuestro equipo de soporte de inmediato.\n\nGracias,\nEquipo de Soporte de Napses"
+      }
+  },
+  "admin-otp": {
+      "sms": {
+        "message": "{otp} es el Código de Acceso Único (OTP) para el inicio de sesión en MVPRockets en Napses.",
+        "template_id": "1007168560401680472"
+      },
+      "whatsapp": {
+        "message": "{otp} es el Código de Acceso Único (OTP) para el inicio de sesión en MVPRockets."
+      },
+      "email": {
+        "subject": "Tu Código OTP para Acceso Seguro",
+        "message": "Estimado/a {name},\n\nTu Código de Acceso Único (OTP) para acceder a tu cuenta es: {otp}.\n\nPor favor, introduce este código en los próximos {expiry} minutos para completar la verificación. Por tu seguridad, no compartas este código con nadie.\n\nSi no solicitaste este código, por favor contacta con nuestro equipo de soporte de inmediato.\n\nGracias,\nEquipo de Soporte de Napses"
+       }
+  }
+}

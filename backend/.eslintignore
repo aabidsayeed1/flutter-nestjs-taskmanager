@@ -1,0 +1,4 @@
+build/
+coverage/
+**/migrations/**
+**/seeders/** 

@@ -1,0 +1,8 @@
+{
+	"editor.defaultFormatter": "esbenp.prettier-vscode", // It takes prettier as its formatter
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit",
+		"source.organizeImports": "explicit",
+		"source.fixAll": "explicit"
+	} // Execute in order. Use this to guarantee that a specific code action is always run before or after another one that may conflict with it
+}

@@ -1,0 +1,44 @@
+image: node:18.18.2 # Node.js image with npm included
+
+pipelines:
+    default:
+        - step:
+              name: Build and Test API
+              size: 2x
+              caches:
+                  - node
+              services:
+                  - postgres
+              script:
+                  - apt-get update && apt-get install -y postgresql-client
+                  - npm ci
+                  - ./create-database.sh test
+                  - npm run test:cov
+              artifacts:
+                  - coverage/**
+
+        - step:
+              name: Sonar Analysis for API
+              script:
+                  - pipe: sonarsource/sonarqube-scan:2.0.1
+                    variables:
+                        SONAR_HOST_URL: 'https://sonar.napses.in'
+                        SONAR_TOKEN: $SONAR_TOKEN
+                        EXTRA_ARGS: >
+                            -Dsonar.projectKey=nest-api-template
+                            -Dsonar.projectName=nest-api-template
+                            -Dsonar.projectVersion=1.0
+                            -Dsonar.sourceEncoding=UTF-8
+                            -Dsonar.sources=src
+                            -Dsonar.typescript.lcov.reportPaths=coverage/lcov.info
+
+definitions:
+    caches:
+        node: ~/.npm
+
+    services:
+        postgres:
+            image: postgres:13
+            variables:
+                POSTGRES_USER: 'root'
+                POSTGRES_PASSWORD: 'root'
